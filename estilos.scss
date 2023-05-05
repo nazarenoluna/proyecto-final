@@ -89,6 +89,11 @@ header {
     }
 }
 
+.linea{
+    background-color: $color-hf;
+    @include sizes(30px, 100%);
+    box-shadow: inset 0 0 5px #000, inset 0 0 5px #000, inset 0 0 5px #000;
+}
 .jumbotron {
     background-image: linear-gradient(
         $color-jumbotron1,
@@ -143,6 +148,7 @@ header {
 h2 {
     @include sizes(auto, 100%);
     background-color: $color-hf;
+    box-shadow: inset 0 0 5px #000, inset 0 0 5px #000, inset 0 0 5px #000;
     font-family: $font2;
     font-size: 50px;
     text-align: center;
