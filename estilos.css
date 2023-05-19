@@ -179,14 +179,17 @@ footer .redes a:hover {
 }
 
 .oferta {
-  height: 100vh;
+  height: 480px;
   width: 100%;
   background-color: #df89af;
   background-image: linear-gradient(rgba(247, 37, 132, 0.445), rgba(255, 255, 255, 0.445)), url(./img/jugueteria2.jpg);
   background-size: cover;
-  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Irish Grover", cursive;
   text-align: center;
+  padding-top: 85px;
   margin: 0;
 }
 .oferta .descuento {
@@ -211,6 +214,9 @@ footer .redes a:hover {
     opacity: 0;
     scale: 1;
   }
+}
+.oferta p {
+  font-size: 20px;
 }
 .oferta .btn {
   align-self: center;
@@ -320,36 +326,73 @@ footer .redes a:hover {
 /*  mediaquery de la pagina index.html  en imagen del carrusel */
 @media only screen and (min-width: 720px) {
   .carousel .img_size {
-    height: 720px;
+    height: 650px;
     width: 100%;
   }
+  .carousel .mensaje_carousel {
+    padding-bottom: 50px;
+  }
   .jumbotron {
-    height: 500px;
+    height: 480px;
   }
 }
-/*pagina index.html servicios */
+/* mediaquery pagina index.html servicios */
 @media only screen and (min-width: 792px) {
   .servicios {
     flex-direction: row;
   }
 }
-/*pagina nosotros.html */
-@media only screen and (min-width: 300px) and (max-width: 1149px) {
+/* mediaquery pagina nosotros.html */
+@media only screen and (min-width: 300px) and (max-width: 942px) {
   .jumbotron-pagina {
     height: 500px;
   }
   .jumbotron-pagina p {
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
   }
 }
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 943px) {
   .jumbotron-pagina {
-    height: 730px;
+    height: calc(100vh - 180px);
   }
   .jumbotron-pagina p {
     height: 200px;
     overflow-y: scroll hidden;
+  }
+}
+/* mediaquery pagina ofertas.html */
+@media only screen and (min-width: 476px) and (max-width: 984px) {
+  .oferta {
+    padding-bottom: 80px;
+  }
+  .oferta h3 {
+    font-size: 50px;
+    padding-top: 15px;
+  }
+  .oferta p {
+    font-size: 25px;
+    padding-top: 15px;
+  }
+  .oferta a {
+    padding-top: 15px;
+  }
+}
+@media only screen and (min-width: 985px) {
+  .oferta {
+    height: calc(100vh - 220px);
+    padding-bottom: 80px;
+  }
+  .oferta h3 {
+    font-size: 50px;
+    padding-top: 15px;
+  }
+  .oferta p {
+    font-size: 25px;
+    padding-top: 15px;
+  }
+  .oferta a {
+    padding-top: 15px;
   }
 }
 /* mediaquery de la pagina juguetes.html , cambiando los grids */

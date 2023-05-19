@@ -220,13 +220,16 @@ footer {
 
 //estilos pagina ofertas
 .oferta{
-    @include sizes(100vh, 100%);
+    @include sizes(480px, 100%);
     background-color: $color-fondo;
     background-image: linear-gradient(($color-jumbotron1), ($color-jumbotron2)), url(./img/jugueteria2.jpg);
     background-size: cover;
-    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: $font3;
     text-align: center;
+    padding-top: 85px;
     margin: 0;
 
     .descuento{
@@ -254,6 +257,10 @@ footer {
                 
             }
         }
+    }
+
+    p{
+        font-size: 20px;
     }
 
     .btn{
@@ -370,38 +377,77 @@ footer {
 @media only screen and (min-width: 720px) {
     .carousel{
         .img_size {
-            @include sizes(720px, 100%);
+            @include sizes(650px, 100%);
+        }
+        .mensaje_carousel{
+            padding-bottom: 50px;
         }
     }
     .jumbotron{
-        height: 500px;
+        height: 480px;
     }
 }
 
-/*pagina index.html servicios */
+/* mediaquery pagina index.html servicios */
 @media only screen and (min-width: 792px) {
     .servicios{
         flex-direction: row;
     }
 }
 
-/*pagina nosotros.html */
-@media only screen and (min-width: 300px) and (max-width: 1149px) {
+/* mediaquery pagina nosotros.html */
+@media only screen and (min-width: 300px) and (max-width: 942px) {
     .jumbotron-pagina {
         height: 500px;
         p{
-            height: 200px;
+            height: 300px;
             overflow-y: scroll;
         }
     }
 }
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 943px) {
     .jumbotron-pagina {
-        height: 730px;
+        height: calc(100vh - 180px);
         p{
             height: 200px;
             overflow-y: scroll hidden;
+        }
+    }
+}
+
+
+/* mediaquery pagina ofertas.html */
+@media only screen and (min-width: 476px) and (max-width: 984px) {
+    .oferta {
+        padding-bottom: 80px;
+        h3{
+            font-size: 50px;
+            padding-top: 15px;
+        }
+        p{
+            font-size: 25px;
+            padding-top: 15px;
+        }
+        a{
+            padding-top: 15px;
+        }
+    }
+}
+@media only screen and (min-width: 985px) {
+    .oferta {
+        height: calc(100vh - 220px);
+        padding-bottom: 80px;
+        h3{
+            font-size: 50px;
+            padding-top: 15px;
+        }
+        p{
+            font-size: 25px;
+            padding-top: 15px;
+        }
+        a{
+            padding-top: 15px;
         }
     }
 }
